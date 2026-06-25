@@ -4,6 +4,8 @@ body {
   background-color: #fcfbfc;
 }
 
+/* --- HEADER SECTION --- */
+
 header {
   background-color: #1c1c1c;
   padding: 1rem 2rem;
@@ -32,7 +34,75 @@ header ul li a {
   padding: 0.5rem 0.5rem;
 }
 
-
 header ul li a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Efek kilau halus */
+}
+
+/* --- HOME SECTION --- */
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fcfbfc;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home-content {
+  text-align: center;
+  color: #1c1c1c;
+
+  h1 {
+  margin-top: 0;
+  font-size: 3.5rem;
+  color: #1c1c1c;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #595959;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.home-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: #1c1c1c;
+    color: #ffffff;
+  }
+
+  a:hover {
+    background-color: #2e2e2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  }
 }
