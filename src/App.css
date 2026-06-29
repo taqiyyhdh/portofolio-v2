@@ -416,5 +416,144 @@ header ul li a:hover {
   background-color: #2e2e2e;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-  
+}
+
+/* --- Portfolio Section Base --- */
+.portfolio-section {
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.portfolio-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #1c1c1c;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.projects-list-zigzag {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.project-row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- Sisi Gambar --- */
+.project-image-side {
+  flex: 1;
+  width: 100%;
+}
+
+.image-wrapper {
+  width: 100%;  
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.image-placeholder:hover {
+  transform: translateY(-5px);
+}
+
+/* --- Sisi Teks Deskripsi --- */
+.project-text-side {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
+
+.project-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #7da4db; 
+}
+
+.project-text-side h3 {
+  font-size: 1.8rem;
+  color: #1c1c1c;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.project-description {
+  color: #595959;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+/* --- Badges / Tags --- */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.tag-badge {
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+}
+
+/* --- Buttons Link --- */
+.project-links {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-project {
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  color: #ffffff;
+  background-color: #1c1c1c;
+}
+
+.btn-project:hover {
+  background-color: #2e2e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
