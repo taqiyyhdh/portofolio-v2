@@ -557,3 +557,39 @@ header ul li a:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
+
+.footer-section {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 40px 0;
+  font-size: 0.9rem;
+}
+
+.footer-section .footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section .footer-info p {
+  margin: 0;
+}
+
+
+.footer-section .footer-socials-horizontal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-section .footer-socials-horizontal a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-section .footer-socials-horizontal a:hover {
+  color: #dce5f5;
+}
