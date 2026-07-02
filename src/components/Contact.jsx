@@ -1,11 +1,8 @@
-import { Component } from 'react';
-
-class Contact extends Component {
-  render() {
-    return (
-      <section id="contact" className="contact-section">
-        <h2 className="contact-title">Contact Me</h2>
-        
+const Contact = () => {
+  return (
+    <section id="contact" className="contact-section">
+      <h2 className="contact-title">Contact Me</h2>
+      
         <div className="contact-container">
           <div className="contact-info">
             <h3>Let's connect!</h3>
@@ -78,7 +75,6 @@ class Contact extends Component {
         </div>
       </section>
     );
-  }
-}
+  };
 
 export default Contact;
