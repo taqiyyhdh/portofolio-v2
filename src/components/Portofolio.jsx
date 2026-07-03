@@ -1,9 +1,8 @@
-import { Component } from "react";
 import qyufeeImg from '../assets/qyufee-preview.png';
 import geometryImg from '../assets/geometry-preview.png';
 
-class Portofolio extends Component {
-  projects = [
+const Portofolio = () => {
+  const projects = [
     {
       id: 1,
       title: "Qyuféé - Point of Sales App",
@@ -24,14 +23,13 @@ class Portofolio extends Component {
     }
   ];
 
-  render() {
-    return (
-      <section className="portfolio-section" id="portfolio">
-        <div className="portfolio-container">
-          <h2 className="section-title">My Project</h2>
-          
+  return (
+    <section className="portfolio-section" id="portfolio">
+      <div className="portfolio-container">
+        <h2 className="section-title">My Project</h2>
+        
           <div className="projects-list-zigzag">
-            {this.projects.map((project, index) => (
+            {projects.map((project, index) => (
               <div 
                 className={`project-row ${index % 2 === 1 ? 'row-reverse' : ''}`} 
                 key={project.id}
@@ -75,6 +73,5 @@ class Portofolio extends Component {
       </section>
     );
   }
-}
 
 export default Portofolio;
