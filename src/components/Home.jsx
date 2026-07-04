@@ -1,12 +1,8 @@
-import { Component } from 'react';
-
-class Home extends Component {
-  render() {
-
-    return (
-      <section id="home" className="home-section">
-        <div className="home-container">
-          <div className="home-content">
+const Home = () => {
+  return (
+    <section id="home" className="home-section">
+      <div className="home-container">
+        <div className="home-content">
             <h1>Taqiyyah Adha</h1>
             <h3>Aspiring Web Developer | Frontend Enthusiast</h3>
             
@@ -17,8 +13,7 @@ class Home extends Component {
           </div>
         </div>
       </section>
-    )
-  }
-}
+    );
+};
 
 export default Home;
