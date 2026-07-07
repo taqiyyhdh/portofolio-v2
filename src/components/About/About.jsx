@@ -1,3 +1,5 @@
+import './About.css';
+
 const About = () => {
   return (
     <section id="about" className="about-section">
@@ -34,8 +36,8 @@ const About = () => {
             </p>
 
             <div className="about-cta">
-              <a href="#" download>Download CV</a>
-              <a href="#contact" className="btn-secondary">Hire Me</a>
+              <a href="#" className="btn-cv" download>Download CV</a>
+              <a href="#contact" className="btn-contact">Hire Me</a>
             </div>
           </div>
 
