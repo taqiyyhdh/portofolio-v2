@@ -1,5 +1,6 @@
-import qyufeeImg from '../assets/qyufee-preview.png';
-import geometryImg from '../assets/geometry-preview.png';
+import './Portofolio.css';
+import qyufeeImg from '../../assets/qyufee-preview.png';
+import geometryImg from '../../assets/geometry-preview.png';
 
 const Portofolio = () => {
   const projects = [
@@ -57,11 +58,11 @@ const Portofolio = () => {
                   </div>
                   
                   <div className="project-links">
-                    <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn-project">
-                      View Code
-                    </a>
-                    <a href={project.demoLink} target="_blank" rel="noreferrer" className="btn-project">
+                    <a href={project.demoLink} target="_blank" rel="noreferrer" className="btn-demo">
                       Live Demo
+                    </a>
+                    <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn-code">
+                      View Code
                     </a>
                   </div>
                 </div>
