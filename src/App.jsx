@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Portofolio from './components/Portofolio/Portofolio';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (

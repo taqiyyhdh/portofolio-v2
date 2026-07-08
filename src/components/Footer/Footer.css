@@ -1,8 +1,9 @@
 .footer-section {
-  background-color: #1c1c1c;
-  color: #ffffff;
+  background-color: var(--text-main);
+  color: var(--bg-surface);
   padding: 40px 0;
   font-size: 0.9rem;
+  letter-spacing: 0.03em;
 }
 
 .footer-section .footer-container {
@@ -16,8 +17,9 @@
 
 .footer-section .footer-info p {
   margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
 }
-
 
 .footer-section .footer-socials-horizontal {
   display: flex;
@@ -25,11 +27,14 @@
 }
 
 .footer-section .footer-socials-horizontal a {
-  color: #ffffff;
+  color: var(--bg-surface);
   text-decoration: none;
-  transition: color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
 }
 
 .footer-section .footer-socials-horizontal a:hover {
-  color: #dce5f5;
+  color: var(--accent);
+  transform: translateY(-2px);
 }
