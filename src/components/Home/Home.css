@@ -82,3 +82,27 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2.3rem; 
+    letter-spacing: -0.01em;
+    margin-bottom: 0.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    padding: 0 10px;
+  }
+
+  .home-buttons {
+    gap: 0.8rem;
+  }
+
+  .home-buttons a {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
