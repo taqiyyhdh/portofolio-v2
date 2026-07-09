@@ -31,3 +31,19 @@ header ul li a {
 header ul li a:hover {
   color: var(--accent);
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 1rem; 
+  }
+
+  header ul {
+    gap: 1rem; 
+  }
+
+  header ul li a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.3rem;
+    letter-spacing: 0.02em;
+  }
+}
