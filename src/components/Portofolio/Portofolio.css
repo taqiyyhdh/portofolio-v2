@@ -148,3 +148,71 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .projects-list-zigzag {
+    gap: 4.5rem; 
+  }
+
+  .project-row, 
+  .project-row.row-reverse {
+    flex-direction: column; 
+    gap: 1.5rem;
+    padding-top: 2rem; 
+  }
+
+  .project-image-side, 
+  .project-text-side {
+    width: 100%;
+  }
+
+  .project-number {
+    top: 0;
+    left: 0;
+    font-size: 1.1rem;
+  }
+
+  .project-text-side h3 {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+   text-align: left; 
+  }
+
+  .project-tags {
+    gap: 8px;
+    margin-bottom: 1.8rem;
+  }
+
+  .tag-badge {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+  }
+
+  .project-links {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .project-links a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
