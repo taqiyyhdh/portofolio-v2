@@ -133,3 +133,49 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 20px 60px 20px; 
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .about-profile,
+  .about-details {
+    width: 100%;
+  }
+
+  .skills-list {
+    padding: 0 10px;
+  }
+
+  .about-description {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .about-cta {
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-cta a {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    flex: 1;
+    max-width: 160px;
+  }
+}
