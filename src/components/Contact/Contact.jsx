@@ -1,4 +1,6 @@
 import './Contact.css';
+import { FiMail, FiMapPin } from 'react-icons/fi';
+import { FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -15,7 +17,9 @@ const Contact = () => {
             
             <div className="contact-details-list">
               <div className="contact-item">
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon">
+                  <FiMapPin />
+                </span>
                 <div>
                   <h4>Location</h4>
                   <p>Padang, Indonesia</p>
@@ -23,7 +27,9 @@ const Contact = () => {
               </div>
               
               <div className="contact-item">
-                <span className="contact-icon">✉️</span>
+                <span className="contact-icon">
+                  <FiMail />
+                </span>
                 <div>
                   <h4>Email</h4>
                   <p><a href="mailto:taqiyyhdh@gmail.com">taqiyyhdh@gmail.com</a></p>
@@ -32,8 +38,12 @@ const Contact = () => {
             </div>
 
             <div className="contact-socials">
-              <a href="https://www.linkedin.com/in/taqiyyahadha" target="_blank" rel="noreferrer" className="social-link">LinkedIn</a>
-              <a href="https://github.com/taqiyyhdh" target="_blank" rel="noreferrer" className="social-link">GitHub</a>
+              <a href="https://www.linkedin.com/in/taqiyyahadha" target="_blank" rel="noreferrer" className="social-link">
+                <FaLinkedin /> LinkedIn
+              </a>
+              <a href="https://github.com/taqiyyhdh" target="_blank" rel="noreferrer" className="social-link">
+                <FaGithub /> GitHub
+              </a>
             </div>
           </div>
 
@@ -70,7 +80,9 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-submit">Kirim Pesan</button>
+              <button type="submit" className="btn-submit">
+                <FaPaperPlane /> Kirim Pesan
+              </button>
             </form>
           </div>
 
