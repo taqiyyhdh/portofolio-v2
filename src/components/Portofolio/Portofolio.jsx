@@ -1,6 +1,7 @@
 import './Portofolio.css';
 import qyufeeImg from '../../assets/qyufee-preview.png';
 import geometryImg from '../../assets/geometry-preview.png';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const Portofolio = () => {
   const projects = [
@@ -59,10 +60,10 @@ const Portofolio = () => {
                   
                   <div className="project-links">
                     <a href={project.demoLink} target="_blank" rel="noreferrer" className="btn-demo">
-                      Live Demo
+                      <FaExternalLinkAlt /> Live Demo
                     </a>
                     <a href={project.githubLink} target="_blank" rel="noreferrer" className="btn-code">
-                      View Code
+                      <FaGithub /> View Code
                     </a>
                   </div>
                 </div>
