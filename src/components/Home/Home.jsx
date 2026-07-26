@@ -1,3 +1,4 @@
+import { FaCode, FaGithub } from 'react-icons/fa';
 import './Home.css';
 
 const Home = () => {
@@ -9,8 +10,16 @@ const Home = () => {
             <h3>Aspiring Web Developer | Frontend Enthusiast</h3>
             
             <ul className="home-buttons">
-              <li><a href="#portfolio" className="btn-primary btn-project">Project</a></li>
-              <li><a href="https://github.com/taqiyyhdh" target="_blank" rel="noreferrer" className="btn-secondary btn-github">Github</a></li>
+              <li>
+                <a href="#portfolio" className="btn-primary btn-project">
+                  <FaCode /> Project
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/taqiyyhdh" target="_blank" rel="noreferrer" className="btn-secondary btn-github">
+                  <FaGithub /> Github
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,4 +1,6 @@
+import { FaCss3Alt, FaDownload, FaHtml5, FaJsSquare, FaPaperPlane, FaReact } from 'react-icons/fa';
 import './About.css';
+import { SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 const About = () => {
   return (
@@ -19,11 +21,12 @@ const About = () => {
             <div className="skills-container">
               <h3>Tech Stack</h3>
               <ul className="skills-list">
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Tailwind</li>
-                <li>React</li>
-                <li>TypeScript</li>
+                <li><FaHtml5 /> HTML</li>
+                <li><FaCss3Alt /> CSS</li>
+                <li><FaJsSquare /> JavaScript</li>
+                <li><SiTailwindcss /> Tailwind</li>
+                <li><FaReact /> React</li>
+                <li><SiTypescript /> TypeScript</li>
               </ul>
             </div>
           </div>
@@ -36,8 +39,12 @@ const About = () => {
             </p>
 
             <div className="about-cta">
-              <a href="#" className="btn-cv" download>Download CV</a>
-              <a href="#contact" className="btn-contact">Hire Me</a>
+              <a href="#" className="btn-cv" download>
+                <FaDownload /> Download CV
+              </a>
+              <a href="#contact" className="btn-contact">
+                <FaPaperPlane /> Hire Me
+              </a>
             </div>
           </div>
 
