@@ -1,15 +1,58 @@
+import {motion} from 'framer-motion';
 import { FaCss3Alt, FaDownload, FaHtml5, FaJsSquare, FaPaperPlane, FaReact } from 'react-icons/fa';
-import './About.css';
 import { SiTailwindcss, SiTypescript } from 'react-icons/si';
+import './About.css';
+
+const fadeInUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut' }
+  }
+};
+
+const skillsContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Tiap ikon muncul dengan jeda 0.1 detik
+      delayChildren: 0.2
+    }
+  }
+};
+
+const skillItemVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: 'easeOut' }
+  }
+};
 
 const About = () => {
   return (
     <section id="about" className="about-section">
-      <h2 className="about-title">About Me</h2>
+      <motion.h2 
+        className="about-title"
+        variants={fadeInUpVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+      >
+        About Me</motion.h2>
 
         <div className="about-container">
           
-          <div className="about-profile">
+          <motion.div 
+            className="about-profile"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <div className="profile-img-wrapper">
               <img 
                 src="https://placehold.co/150" 
@@ -20,18 +63,30 @@ const About = () => {
             
             <div className="skills-container">
               <h3>Tech Stack</h3>
-              <ul className="skills-list">
-                <li><FaHtml5 /> HTML</li>
-                <li><FaCss3Alt /> CSS</li>
-                <li><FaJsSquare /> JavaScript</li>
-                <li><SiTailwindcss /> Tailwind</li>
-                <li><FaReact /> React</li>
-                <li><SiTypescript /> TypeScript</li>
-              </ul>
+              <motion.ul 
+                className="skills-list"
+                variants={skillsContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <motion.li variants={skillItemVariants}><FaHtml5 /> HTML</motion.li>
+                <motion.li variants={skillItemVariants}><FaCss3Alt /> CSS</motion.li>
+                <motion.li variants={skillItemVariants}><FaJsSquare /> JavaScript</motion.li>
+                <motion.li variants={skillItemVariants}><SiTailwindcss /> Tailwind</motion.li>
+                <motion.li variants={skillItemVariants}><FaReact /> React</motion.li>
+                <motion.li variants={skillItemVariants}><SiTypescript /> TypeScript</motion.li>
+              </motion.ul>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="about-details">
+          <motion.div
+            className="about-details"
+            variants={fadeInUpVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <p className="about-description">
               Saya seorang lulusan S1 Sistem Informasi yang fokus mendalami dunia Frontend Web Development. 
               Berawal dari membangun logika dasar menggunakan HTML, CSS, dan JavaScript, kini saya aktif mengembangkan aplikasi berbasis React dan TypeScript menggunakan ekosistem Vite. 
@@ -46,7 +101,7 @@ const About = () => {
                 <FaPaperPlane /> Hire Me
               </a>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </section>
