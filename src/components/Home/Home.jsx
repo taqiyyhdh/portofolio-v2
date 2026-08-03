@@ -1,15 +1,46 @@
+import { motion } from 'framer-motion';
 import { FaCode, FaGithub } from 'react-icons/fa';
 import './Home.css';
+
+const containerVariants = {
+  hidden: {opaacity: 0},
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 25},
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: 'easeOut'}
+  }
+};
 
 const Home = () => {
   return (
     <section id="home" className="home-section">
       <div className="home-container">
-        <div className="home-content">
-            <h1>Taqiyyah Adha</h1>
-            <h3>Aspiring Web Developer | Frontend Enthusiast</h3>
+        <motion.div
+         className="home-content"
+         variants={containerVariants}
+         initial="hidden"
+         animate="visible"
+        >
+            <motion.h1 variants={itemVariants}>
+              Taqiyyah Adha
+            </motion.h1>
+
+            <motion.h3 variants={itemVariants}>
+              Aspiring Web Developer | Frontend Enthusiast
+            </motion.h3>
             
-            <ul className="home-buttons">
+            <motion.ul className="home-buttons" variants={itemVariants}>
               <li>
                 <a href="#portfolio" className="btn-primary btn-project">
                   <FaCode /> Project
@@ -20,8 +51,8 @@ const Home = () => {
                   <FaGithub /> Github
                 </a>
               </li>
-            </ul>
-          </div>
+            </motion.ul>
+          </motion.div>
         </div>
       </section>
     );

@@ -2,6 +2,55 @@ import './Portofolio.css';
 import qyufeeImg from '../../assets/qyufee-preview.png';
 import geometryImg from '../../assets/geometry-preview.png';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+const titleVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: 'easeOut' }
+  }
+};
+
+
+const fadeInLeftVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: 'easeOut' }
+  }
+};
+
+const fadeInRightVariants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8, ease: 'easeOut' }
+  }
+};
+
+const tagsContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const tagItemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3 }
+  }
+};
 
 const Portofolio = () => {
   const projects = [
@@ -28,17 +77,35 @@ const Portofolio = () => {
   return (
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
-        <h2 className="section-title">My Project</h2>
         
-          <div className="projects-list-zigzag">
-            {projects.map((project, index) => (
+        <motion.h2 
+          className="section-title"
+          variants={titleVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          My Project
+        </motion.h2>
+        
+        <div className="projects-list-zigzag">
+          {projects.map((project, index) => {
+            const isEven = index % 2 === 1;
+
+            return (
               <div 
-                className={`project-row ${index % 2 === 1 ? 'row-reverse' : ''}`} 
+                className={`project-row ${isEven ? 'row-reverse' : ''}`} 
                 key={project.id}
               >
-                
                 <span className="project-number">0{index + 1}.</span>
-                <div className="project-image-side">
+                
+                <motion.div 
+                  className="project-image-side"
+                  variants={isEven ? fadeInRightVariants : fadeInLeftVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                >
                   <div className="image-wrapper">
                     <img 
                       src={project.image} 
@@ -46,17 +113,35 @@ const Portofolio = () => {
                       className="project-img"
                     />
                   </div>
-                </div>
+                </motion.div>
                 
-                <div className="project-text-side">
+                <motion.div 
+                  className="project-text-side"
+                  variants={isEven ? fadeInLeftVariants : fadeInRightVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                >
                   <h3>{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-                  
-                  <div className="project-tags">
+
+                  <motion.div 
+                    className="project-tags"
+                    variants={tagsContainerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
                     {project.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="tag-badge">{tag}</span>
+                      <motion.span 
+                        key={tagIndex} 
+                        className="tag-badge"
+                        variants={tagItemVariants}
+                      >
+                        {tag}
+                      </motion.span>
                     ))}
-                  </div>
+                  </motion.div>
                   
                   <div className="project-links">
                     <a href={project.demoLink} target="_blank" rel="noreferrer" className="btn-demo">
@@ -66,14 +151,16 @@ const Portofolio = () => {
                       <FaGithub /> View Code
                     </a>
                   </div>
-                </div>
+                </motion.div>
 
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
-    );
-  }
+
+      </div>
+    </section>
+  );
+};
 
 export default Portofolio;
