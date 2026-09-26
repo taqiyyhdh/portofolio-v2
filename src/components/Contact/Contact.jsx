@@ -31,6 +31,28 @@ const fadeInRightVariants = {
 };
 
 const Contact = () => {
+
+  // Fungsi untuk menangani submit via mailto native
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+
+    // Email tujuan kamu
+    const myEmail = "taqiyyahadha@gmail.com";
+    
+    // Subjek dan isi email otomatis
+    const subject = encodeURIComponent(`Pesan Portofolio dari ${name}`);
+    const body = encodeURIComponent(
+      `Nama: ${name}\nEmail Pengirim: ${email}\n\nPesan:\n${message}`
+    );
+
+    // Buka aplikasi email pengguna
+    window.location.href = `mailto:${myEmail}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <section id="contact" className="contact-section">
   
@@ -76,7 +98,7 @@ const Contact = () => {
               </span>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:taqiyyhdh@gmail.com">taqiyyhdh@gmail.com</a></p>
+                <p><a href="mailto:taqiyyhdh@gmail.com">taqiyyahadha@gmail.com</a></p>
               </div>
             </div>
           </div>
@@ -98,7 +120,7 @@ const Contact = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
             
             <div className="form-group">
               <input 
