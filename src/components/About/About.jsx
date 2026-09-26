@@ -55,7 +55,7 @@ const About = () => {
           >
             <div className="profile-img-wrapper">
               <img 
-                src="https://placehold.co/150" 
+                src="profile.jpeg" 
                 alt="Placeholder Profil" 
                 className="profile-img"
               />
